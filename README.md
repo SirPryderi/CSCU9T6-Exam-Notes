@@ -99,13 +99,50 @@ or iterative search.
 ---
 
 # Reasoning Systems
-## Decision Support 1
-## Decision Support 2
-## Decision Support 3
-## Decision Support 4
+## Rule-based Systems (RBS)
+**Expert systems** aim to caputre the **knowledge** of a human expert in a doman and embody it within a **software** system.
+
+Rule-based systems have the following:
+
+- **Knowledge base** ─ Rules embodying expert knowledge about the problem domain.
+- **Database** ─ Contains a set of known facts about the problem domain.
+- **Inference engine** ─ carries out the reasoning process, using rules and facts.
+- **Explaination Facilities** ─ Provides information to users about the reasoning steps that are being followed.
+- **User interface** ─ communication between the user and the system.
+
+![expert-system-architecture]
+
+**Expert System Shells** are programs and or/framework that can be customised to create a RBS. They are known as **shells** or **rule engines**.
+
+The shell usually provides the _inference engine_, _explaination facilities_, and _infrastructure_ for populating the knowledge base and the rules. Sometimes, they also provide interfaces for both users and developers.
+
+The **inference process** used in a RBS is **deductive inference**, meaning that rules of logic are used to create new knowledge combining previous knowledge and rules.
+
+### Deductive inference
+There are two main approaches to deductive inference:
+- **Forward Chaining**
+- **Backward Chaining**
+
+#### Forward Chaining
+Forward chaining uses rules like:
+		If A and B Then C
+To increase the number of facts in knowledge base.
+
+The problem with this approach is controlling it. Different rules might be valid at different times, so you need to **indentify** (matching) them, and **decide** which one to use (conflict resolution). 
+This makes it useful for RBS with **no specific goal**.
+
+#### Backward Chaining
+Backward chaining uses rules like:
+		C If A and B
+The system tries to justify all the subrules that satisfies the **goal** until an answer is found. This might lead to many dead-ends before a solution. 
+
+## Certainty factors in RBS
+## Fuzzy Logic
+## Case-based Reasoning
 
 ---
 
 # Bayesian Belief Networks
 
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
+[expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
