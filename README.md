@@ -125,7 +125,9 @@ There are two main approaches to deductive inference:
 
 #### Forward Chaining
 Forward chaining uses rules like:
+
 		If A and B Then C
+		
 To increase the number of facts in knowledge base.
 
 The problem with this approach is controlling it. Different rules might be valid at different times, so you need to **indentify** (matching) them, and **decide** which one to use (conflict resolution). 
@@ -133,10 +135,46 @@ This makes it useful for RBS with **no specific goal**.
 
 #### Backward Chaining
 Backward chaining uses rules like:
+
 		C If A and B
+		
 The system tries to justify all the subrules that satisfies the **goal** until an answer is found. This might lead to many dead-ends before a solution. 
 
 ## Certainty factors in RBS
+To improve the working of an RBS, a way of representing the degree of uncertainty related to both facts and rules.
+
+There are many reasons why uncertainty is introduced:
+- Information is incomplemte
+- Information is not reliable
+- Language use imprecise
+- There is conflicting information
+- Information is approximate
+
+**Certainty factors**, also known as _confidence factors_, are a measure which represents a degree of confidence that some condition is _true_.
+
+Certainty factors have to be combined when two rules are combined together.
+
+		CF(A and B) = min(CF(A), CF(B))
+		CF(A or  B) = max(CF(A), CF(B))
+		
+When applying a rule such as:
+		
+		If P Then Q @ n
+
+The uncertainty factor of Q is obtained by combining the CF of the rule and the CF of the fact
+
+		CF(Q) = CF(P) · n
+		
+Altought Confidence Factors resembles **probability**, they are not the same. There is no rigorious mathematical foundation for CF. They are often altered with the design, and there is no strict way of evaluating the certainty of a rule and/or fact. More often than not though, they are extremely effective in practical applications.
+
+Older RBS used Bayesian probability to handle uncertainty.
+
+This model assumes that:
+- Hypotesis are mutually exclusive and exhaustive
+- Piece of evidence are conditially independent
+
+This mode is usually inaccurate, because the assumptions above are mostly never true, but this model has evolved into **belief networks** that are not giving very promising results.
+
 ## Fuzzy Logic
 ## Case-based Reasoning
 
