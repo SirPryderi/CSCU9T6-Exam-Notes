@@ -182,6 +182,7 @@ Another important Reasoning System is Case-Based reasoning. Differently from rul
 
 In a CBR knowledge is stored as a **record of cases**. 
 
+### Procedure
 The steps towards creating a CBR are:
 - Identifying attributes
 - Identify cases
@@ -195,9 +196,42 @@ To solve a new problem, the system does the following:
 - **Revise** the proposed solution if necessary
 - **Retain** the new solution as part of a new case
 
-CBRs often use the nearest neighbour algorithm to find the most similar case.
+### Similarity
+CBRs often use the **nearest neighbour algorithm** to find the most similar case. This algorithm uses the distance of two points in a n-dimensional space.
 
+The nearest neighbour approach is only effective with **numerical values**, for **nominal values** another way of specifying how much something is similar to something else must be specified. **Tables**, **Taxonomies**, **Ordered Lists**, etc are possible solutions.
 
+**Taxonomy-based comparison** is suitable for comparing nominal values that can be classified into groups.
+
+![food-taxonomy]
+
+### Adaptation
+After having found the best match, the solution might need **adaptation**, since the case won't probably be the exact same. The system might either require a human expert to intervene, or use some other tool, like a neural network to adapt the results to the current case.
+
+The newly created case, should not be directly added to the case-base, or it will become progressively **degraded**. They should first be analysed and accepted.
+
+### Advantages and Disadvantages
+
+**Advantages**
+- Knowledge based on previous data
+- Causal relationships don't need indentification
+- Less formal logic required
+- Adding new knowledge is simple
+- No need for general rules
+- Most people reason by analogy
+
+**Disadvantages**
+- Indentify the most signifcant attributes
+- All the attributes values must be found
+- Decide an algorithm to measure similarity
+- Make an effective adaptation strategy
+
+**When to use CBR**
+- There are records of previously solved cases
+- Historical cases are used to solve new cases
+- Human experts tend talk about examples, rather than rules
+- The problem domain is not well-defined or well-understood
+- Experience is as important as theoretical knowledge
 
 ---
 
@@ -206,3 +240,4 @@ CBRs often use the nearest neighbour algorithm to find the most similar case.
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
 [expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
 [cbr-architecture]: https://www.intechopen.com/source/html/19336/media/image6.png
+[food-taxonomy]: https://cdn.datafloq.com/cms/2016/06/01/taxonomy-food.jpg
