@@ -176,7 +176,28 @@ This model assumes that:
 This mode is usually inaccurate, because the assumptions above are mostly never true, but this model has evolved into **belief networks** that are not giving very promising results.
 
 ## Fuzzy Logic
+
 ## Case-based Reasoning
+Another important Reasoning System is Case-Based reasoning. Differently from rule-based systems, and fuzzy logic, **does not use inference** (rules or logical deduction). CBR relies on the **analogy** between a problem a previous one, looking for the most similar problem that has been solved in the past, and applying the same solution.
+
+In a CBR knowledge is stored as a **record of cases**. 
+
+The steps towards creating a CBR are:
+- Identifying attributes
+- Identify cases
+- Compare a new case, with the record of cases
+
+![cbr-architecture]
+
+To solve a new problem, the system does the following:
+- **Retrieve** the most similar case(s) from the library
+- **Reuse** the case(s) atempt to solve the problem
+- **Revise** the proposed solution if necessary
+- **Retain** the new solution as part of a new case
+
+CBRs often use the nearest neighbour algorithm to find the most similar case.
+
+
 
 ---
 
@@ -184,3 +205,4 @@ This mode is usually inaccurate, because the assumptions above are mostly never 
 
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
 [expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
+[cbr-architecture]: https://www.intechopen.com/source/html/19336/media/image6.png
