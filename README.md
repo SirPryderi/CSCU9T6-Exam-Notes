@@ -28,12 +28,17 @@
       * [Backward Chaining](#backward-chaining)
   * [Certainty factors in RBS](#certainty-factors-in-rbs)
   * [Fuzzy Logic](#fuzzy-logic)
+    * [Defuzzification](#defuzzification)
+    * [Hedges](#hedges)
   * [Case-based Reasoning](#casebased-reasoning)
     * [Procedure](#procedure)
     * [Similarity](#similarity)
     * [Adaptation](#adaptation)
     * [Advantages and Disadvantages](#advantages-and-disadvantages)
 * [Bayesian Belief Networks](#bayesian-belief-networks)
+  * [Probability](#probability)
+  * [Bayes' Theorem](#bayes-theorem)
+  * [Bayesian Classifier](#bayesian-classifier)
 <!-- END TOC -->
 
 # Data Mining
