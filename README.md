@@ -276,7 +276,6 @@ After having found the best match, the solution might need **adaptation**, since
 The newly created case, should not be directly added to the case-base, or it will become progressively **degraded**. They should first be analysed and accepted.
 
 ### Advantages and Disadvantages
-
 **Advantages**
 - Knowledge based on previous data
 - Causal relationships don't need indentification
@@ -303,7 +302,6 @@ The newly created case, should not be directly added to the case-base, or it wil
 # Bayesian Belief Networks
 
 ## Probability
-
 The probability is calculated as: `positive outcomes ÷ total outcomes`. 
 
 Probabilities can be combined:
@@ -325,12 +323,16 @@ The **conditional probability** is the probability of `a` knowing that `b` has h
 If `P(a | b) = P(a)` then `a` is completely unrelated to `b`.
 
 ## Bayes' Theorem
-
 In general `P(a | b) ≠ P(b | a)`, but `P(a | b) * P(b) = P(b | a) * P(a)` (because of the product rule), thus:
 
 		P(a | b) = P(b | a) · P(a) ÷ P(b)
 
 This is known as the **Bayes' Theorem**, and allows to determine the probabiliy of _a_ given _b_, from the probability of _b_ given _a_.
+
+## Bayesian Classifier
+**Bayesian Classfiers** are statistical tools that can predict the probability that a particular sample is a member of a particular class.
+One of the simplest Bayesian Classifier is known as the **Naïve Bayesian Classfier**, based on an _independence_ assumption.
+
 
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
 [expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
