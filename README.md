@@ -302,6 +302,36 @@ The newly created case, should not be directly added to the case-base, or it wil
 
 # Bayesian Belief Networks
 
+## Probability
+
+The probability is calculated as: `positive outcomes ÷ total outcomes`. 
+
+Probabilities can be combined:
+
+		P(a OR b) = P(a) + P(b) // Disjoint and undependent
+		
+		P(a OR b) = P(a) + P(b) - P(a ∩ b)
+		
+		P(a AND b) = P(a) · P(b) // Disjoint and undependent
+		
+		P(a AND b) = P(a | b) · (b)
+		
+		not P(a) = 1 - P(a)
+		
+The **conditional probability** is the probability of `a` knowing that `b` has happened, and is written as:
+		
+		P(a | b)
+		
+If `P(a | b) = P(a)` then `a` is completely unrelated to `b`.
+
+## Bayes' Theorem
+
+In general `P(a | b) ≠ P(b | a)`, but `P(a | b) * P(b) = P(b | a) * P(a)` (because of the product rule), thus:
+
+		P(a | b) = P(b | a) · P(a) ÷ P(b)
+
+This is known as the **Bayes' Theorem**, and allows to determine the probabiliy of _a_ given _b_, from the probability of _b_ given _a_.
+
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
 [expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
 [age-fuzzy-graph]: https://c.mql5.com/2/20/fuzzy_set_age.png
