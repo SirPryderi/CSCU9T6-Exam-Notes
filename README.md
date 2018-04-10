@@ -1,4 +1,5 @@
 # TOC
+<!-- START TOC -->
 * [Data Mining](#data-mining)
   * [Introduction](#introduction)
     * [What is data mining](#what-is-data-mining)
@@ -33,6 +34,7 @@
     * [Adaptation](#adaptation)
     * [Advantages and Disadvantages](#advantages-and-disadvantages)
 * [Bayesian Belief Networks](#bayesian-belief-networks)
+<!-- END TOC -->
 
 # Data Mining
 ## Introduction
@@ -212,8 +214,34 @@ This model assumes that:
 This mode is usually inaccurate, because the assumptions above are mostly never true, but this model has evolved into **belief networks** that are not giving very promising results.
 
 ## Fuzzy Logic
+**Fuzzy logic** is an alternative method to boolean logic for determining the value of a property. Instead of being either true or false, a percentage of how much the current condition fits a definition is used.
 
+For instance, the temperature could be either be represented by a boolean `cold, not cold` (_boolean_) or a set of values could be defined `20% Cold` (_fuzzy_), specifying a degree of how much the value fits in that category (_fuzzy measure_).
 
+Fuzzy set theory and fuzzy logic provide a precise and mathematical basis for reasoning about uncertainty.
+
+Fuzzy sets can be effectively shown in graphs, allowing to calculate the corresponding degree given the measurement. The actual measurement is definited as opposite of fuzzy _crisp_.
+
+![age-fuzzy-graph]
+
+Fuzzy Sets can be used in RBS to define how much something fits a certain quality, instead of using an arbitrary change point with a specific temperature.
+
+This is extremely successful in automatic control systems, like washing machines, air conditioner, etc.
+
+### Defuzzification
+Defuzzification is the process of producing a quantifiable result in Crisp logic, given fuzzy sets and corresponding membership degrees. It is the process that maps a fuzzy set to a crisp set. It is typically needed in fuzzy control systems.
+
+A common and useful defuzzification technique is center of gravity.
+
+### Hedges
+Qualifying words could be provided using a mathematical definition.
+
+Given a function `f` taking values `T`, the following could be defined:
+
+		very_f(T) = f(T)²
+		not_f(T) = 1 - f(T)
+		slightly_hot = hot⁰ᐟ²
+		
 ## Case-based Reasoning
 Another important Reasoning System is Case-Based reasoning. Differently from rule-based systems, and fuzzy logic, **does not use inference** (rules or logical deduction). CBR relies on the **analogy** between a problem a previous one, looking for the most similar problem that has been solved in the past, and applying the same solution.
 
@@ -276,5 +304,6 @@ The newly created case, should not be directly added to the case-base, or it wil
 
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
 [expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
+[age-fuzzy-graph]: https://c.mql5.com/2/20/fuzzy_set_age.png
 [cbr-architecture]: https://www.intechopen.com/source/html/19336/media/image6.png
 [food-taxonomy]: https://cdn.datafloq.com/cms/2016/06/01/taxonomy-food.jpg
