@@ -240,7 +240,7 @@ Given a function `f` taking values `T`, the following could be defined:
 
 		very_f(T) = f(T)²
 		not_f(T) = 1 - f(T)
-		slightly_hot = hot⁰ᐟ²
+		slightly_f = f(T)¹ᐟ²
 		
 ## Case-based Reasoning
 Another important Reasoning System is Case-Based reasoning. Differently from rule-based systems, and fuzzy logic, **does not use inference** (rules or logical deduction). CBR relies on the **analogy** between a problem a previous one, looking for the most similar problem that has been solved in the past, and applying the same solution.
