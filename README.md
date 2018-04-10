@@ -1,3 +1,39 @@
+# TOC
+* [Data Mining](#data-mining)
+  * [Introduction](#introduction)
+    * [What is data mining](#what-is-data-mining)
+    * [Data mining Process](#data-mining-process)
+    * [Origin of data](#origin-of-data)
+    * [Problems with data](#problems-with-data)
+    * [Data mining techniques](#data-mining-techniques)
+    * [Glossary](#glossary)
+  * [Data Preparation](#data-preparation)
+    * [Distribution](#distribution)
+    * [What to look at in a distribution](#what-to-look-at-in-a-distribution)
+      * [Outliers](#outliers)
+      * [Minority values](#minority-values)
+      * [Data Balancing](#data-balancing)
+      * [Data Quantity](#data-quantity)
+      * [Noise and Variability](#noise-and-variability)
+  * [Classification](#classification)
+  * [Data Visualisation](#data-visualisation)
+  * [Prediction](#prediction)
+  * [Data Mining Project](#data-mining-project)
+  * [Logistic Regression](#logistic-regression)
+* [Reasoning Systems](#reasoning-systems)
+  * [Rule-based Systems (RBS)](#rulebased-systems-rbs)
+    * [Deductive inference](#deductive-inference)
+      * [Forward Chaining](#forward-chaining)
+      * [Backward Chaining](#backward-chaining)
+  * [Certainty factors in RBS](#certainty-factors-in-rbs)
+  * [Fuzzy Logic](#fuzzy-logic)
+  * [Case-based Reasoning](#casebased-reasoning)
+    * [Procedure](#procedure)
+    * [Similarity](#similarity)
+    * [Adaptation](#adaptation)
+    * [Advantages and Disadvantages](#advantages-and-disadvantages)
+* [Bayesian Belief Networks](#bayesian-belief-networks)
+
 # Data Mining
 ## Introduction
 ### What is data mining
@@ -176,6 +212,7 @@ This model assumes that:
 This mode is usually inaccurate, because the assumptions above are mostly never true, but this model has evolved into **belief networks** that are not giving very promising results.
 
 ## Fuzzy Logic
+
 
 ## Case-based Reasoning
 Another important Reasoning System is Case-Based reasoning. Differently from rule-based systems, and fuzzy logic, **does not use inference** (rules or logical deduction). CBR relies on the **analogy** between a problem a previous one, looking for the most similar problem that has been solved in the past, and applying the same solution.
