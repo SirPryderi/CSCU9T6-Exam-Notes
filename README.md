@@ -253,11 +253,48 @@ Each neuron is composed of two units:
 - Works well with both numerical and nominal values.
 - Able to generalise data that has not been provided before.
 
+#### Disadvantages
+- Difficult to explain the reasoning behind a prediction
+- No rules to look at
+- Can be very ineffective if trained wrongly
+
 ### Overfitting
 A data mining predicotr can caputre the structore of the data to the point that irrelevant data in the training model are used in the creation of the model, while not generally true. This phenomenon is known as **overfitting**. This usually happens when a dataset is not big enough.
 
 ## Data Mining Project
-## Logistic Regression
+Coming soon!
+
+## Regression
+**Regression** analysis is a statistical process for estimating the relationships among variables.
+
+### Simple Linear Regression
+Simple Linear Regression uses the **Ordinary Least Squares** method. OLS is capable of estimating unknown parameters in a linear regression, by minimising the sum of the suqres of the differences between the dependent variable and those predicted by the linear function.
+
+![ordinary-least-squares]
+
+### Logistic Regression
+Logistic regression allows to use one or more nominal values in a regression model.
+
+It does that with the use of **log odds**.
+
+The odds of an event with probability P(c) are:
+
+		O(c) = P(c) / (1 - P(c))
+		
+The log odds are are a function known as **logit**:
+
+		L(c) = ln(O(c)) = ln(P(c) / (1 - P(c)))
+		
+After some magic, the probability of an event `c`, given `x` are:
+
+		P(c | x) = 1 / (1 + e⁻⁽ᵃˣ ⁺ ᵇ⁾)
+		
+The **likelihood** is the reverse of a conditional probability:
+
+		L(x | y) = P(y | x)
+		
+__The whole thing was out of scope, why did I even bother?__
+
 ## Clustering & Association Rules
 ## Time series Forecasting
 
@@ -461,13 +498,14 @@ This is known as the **Bayes' Theorem**, and allows to determine the probabiliy 
 One of the simplest Bayesian Classifier is known as the **Naïve Bayesian Classfier**, based on an _independence_ assumption.
 
 ## Bayesian Networks
-**Bayesian Belief Networks** (BNNs) are a way of modeling probabilites based on data or knowledge to estimate probabilities of new events.
+**Bayesian Belief Networks** (BNNs) are a way of modeling probabilities based on data or knowledge to estimate probabilities of new events.
 
 
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
 [k-nearest-neighbour]: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/KnnClassification.svg/220px-KnnClassification.svg.png
 [scatter-plot]: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Scatter_diagram_for_quality_characteristic_XXX.svg/1200px-Scatter_diagram_for_quality_characteristic_XXX.svg.png
 [multi-layer-perceptron]: https://www.researchgate.net/profile/Pinyi_Lu/publication/281541059/figure/fig5/AS:281379779694601@1444097575724/The-multilayer-perceptron-structure-of-artificial-neural-network-The-multilayer.png
+[ordinary-least-squares]: https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Okuns_law_quarterly_differences.svg/600px-Okuns_law_quarterly_differences.svg.png
 [expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
 [age-fuzzy-graph]: https://c.mql5.com/2/20/fuzzy_set_age.png
 [cbr-architecture]: https://www.intechopen.com/source/html/19336/media/image6.png
