@@ -143,10 +143,55 @@ Data quality and quantity rely on:
 – The amount of **noise** and **unaccounted for variability** in the data.
 
 ## Classification
+**Classification** is assigning an object to a certain class, based on its **similarity** to previous examples.
+
+The classification usually comes with a degree of certainty. It might either be the probability of that object belonging to that class,
+or how closely it resembles it.
+
+The classification can either have a:
+- **Non-paremetric model** (_k-nearest neighbours_)
+- **Mathematical model** (_neural netoworks_)
+- **Rule-based model** (_decision trees_)
+
+A classification that indicate the propensity to an act, is called **predictive**.
+A classification that indicates the similarity to an objecis called **definitive**.
+
+### Non-parametric models
+#### K-Nearest Neighbour
+Places all the entries in an n-dimensional space, counts all the example in a defined radius, and the ones that appear the most are picked as the winning classification
+![k-nearest-neighbour]
+
+### Rule-based models
+Rule-based models attemps to classify an object based on rules on their attributes.
+
+#### Decision trees
+A decision tree automatically discover a rule from the data, and produces a set of branching decisions that end in a classification. It works best on nominal attributes.
+
+The model tries to optimise the tree by arranging the decision in the most effective way.
+The ID3 algorithm splits on the variables that give the greatest **information gain**. The information gain of a certain event is defined as:
+
+		I(e) = -log₂(P(e))
+		
+##### Entropy
+The **weighted average information** accross al lthe possible values of a variable is called **Entropy**.
+It is calculated as the sum of the probability of each possible event times its information gain:
+
+		H(x) = Σ P(xᵢ) I(xᵢ) = -Σ P(xᵢ) log₂(P(xᵢ))
+		
+**Conditional entropy** is written as `H(outcome | known)`, and measures the uncertainty about the outcome, given what is known.
+
+If `H(outcome)` and `H(outcome | input)` are known, it is possible to calculate how much `input` tells about `outcome` as:
+
+		H(outcome) - H(outcome | input)
+		
+And is defined as **information gain**.
+
 ## Data Visualisation
 ## Prediction
 ## Data Mining Project
 ## Logistic Regression
+## Clustering & Association Rules
+## Time series Forecasting
 
 ---
 
@@ -352,6 +397,7 @@ One of the simplest Bayesian Classifier is known as the **Naïve Bayesian Classf
 
 
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
+[k-nearest-neighbour]: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/KnnClassification.svg/220px-KnnClassification.svg.png
 [expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
 [age-fuzzy-graph]: https://c.mql5.com/2/20/fuzzy_set_age.png
 [cbr-architecture]: https://www.intechopen.com/source/html/19336/media/image6.png
