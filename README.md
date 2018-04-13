@@ -196,6 +196,26 @@ If `H(outcome)` and `H(outcome | input)` are known, it is possible to calculate 
 And is defined as **information gain**.
 
 ## Data Visualisation
+Human eyes are particularly apt at spotting patterns trends and clusters. This only works effectively up to three dimensions.
+
+**Data Visualisation** is used:
+- Before a data mining project to understand the problem.
+- To guide the data mining project choosing a technique.
+- To fine-tune the data mining techniques
+- To show the results of the data mining.
+
+
+### Scatter Plots
+Scatter plots are two-dimensional charts that places two variables as dots in an x-y diagrams.
+
+![scatter-plot]
+
+Can be quickly used to understand the **correlation** between two variables and spot **clusters**.
+
+To reduce probles with **overlapping** of variables, the values can be added with a random delta. This process is known as **jitter**. Also size of the dots, or different colours can be used instead of jittering.
+
+**Projection** happens when trying to plot a graph with more than two dimensions. There always is some loss of information, but there are ways of reducing it.
+
 ## Prediction
 ## Data Mining Project
 ## Logistic Regression
@@ -407,6 +427,7 @@ One of the simplest Bayesian Classifier is known as the **Naïve Bayesian Classf
 
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
 [k-nearest-neighbour]: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/KnnClassification.svg/220px-KnnClassification.svg.png
+[scatter-plot]: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Scatter_diagram_for_quality_characteristic_XXX.svg/1200px-Scatter_diagram_for_quality_characteristic_XXX.svg.png
 [expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
 [age-fuzzy-graph]: https://c.mql5.com/2/20/fuzzy_set_age.png
 [cbr-architecture]: https://www.intechopen.com/source/html/19336/media/image6.png
