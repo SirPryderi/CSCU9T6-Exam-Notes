@@ -217,6 +217,45 @@ To reduce probles with **overlapping** of variables, the values can be added wit
 **Projection** happens when trying to plot a graph with more than two dimensions. There always is some loss of information, but there are ways of reducing it.
 
 ## Prediction
+**Prediction** is the act of guessng the identity of one thing, purely based on the description of another. Not necessarily predicting future events.
+
+Prediction differs from **classification** because it is usually able of predicting continuous numerical values, whereas classifications are able to _predict_ discreet nominal values.
+
+Most prediction techniques are based on mathematical models:
+- Linear regression
+- Power series
+- Neural networks
+- Radial Basis Function
+
+Mathematical models learn the relationship between all predictors at once and the predicted outcome.
+
+### Neural Networks
+A certain type of neural network called **multi-layer perceptron** (MLP) can learn a function between inputs, by building a network of smaller simple functions joined together by weighted connections.
+
+![multi-layer-perceptron]
+
+A MLP has:
+- Input layer
+- Hidden layer(s)
+- Output layer
+
+During the **training** process the neural network uses the data to modify the weights of the connections between the nodes, until it is able to accurately predict the data.
+
+Neural networks use **backpropagation** to balance the weights to reduce the output error.
+
+Each neuron is composed of two units:
+1. The weighted sum of the inputs.
+2. The output of an activation functions.
+
+#### Advantages
+- Very powerful predictions.
+- Works well with non-linear relationship.
+- Works well with both numerical and nominal values.
+- Able to generalise data that has not been provided before.
+
+### Overfitting
+A data mining predicotr can caputre the structore of the data to the point that irrelevant data in the training model are used in the creation of the model, while not generally true. This phenomenon is known as **overfitting**. This usually happens when a dataset is not big enough.
+
 ## Data Mining Project
 ## Logistic Regression
 ## Clustering & Association Rules
@@ -226,7 +265,7 @@ To reduce probles with **overlapping** of variables, the values can be added wit
 
 # Reasoning Systems
 ## Rule-based Systems (RBS)
-**Expert systems** aim to caputre the **knowledge** of a human expert in a doman and embody it within a **software** system.
+**Expert systems** aim to capture the **knowledge** of a human expert in a doman and embody it within a **software** system.
 
 Rule-based systems have the following:
 
@@ -422,12 +461,13 @@ This is known as the **Bayes' Theorem**, and allows to determine the probabiliy 
 One of the simplest Bayesian Classifier is known as the **Naïve Bayesian Classfier**, based on an _independence_ assumption.
 
 ## Bayesian Networks
-**Bayesian Belief Netowkrs** (BNNs) are a way of modeling probabilites based on data or knowledge to estimate probabilities of new events.
+**Bayesian Belief Networks** (BNNs) are a way of modeling probabilites based on data or knowledge to estimate probabilities of new events.
 
 
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
 [k-nearest-neighbour]: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/KnnClassification.svg/220px-KnnClassification.svg.png
 [scatter-plot]: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Scatter_diagram_for_quality_characteristic_XXX.svg/1200px-Scatter_diagram_for_quality_characteristic_XXX.svg.png
+[multi-layer-perceptron]: https://www.researchgate.net/profile/Pinyi_Lu/publication/281541059/figure/fig5/AS:281379779694601@1444097575724/The-multilayer-perceptron-structure-of-artificial-neural-network-The-multilayer.png
 [expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
 [age-fuzzy-graph]: https://c.mql5.com/2/20/fuzzy_set_age.png
 [cbr-architecture]: https://www.intechopen.com/source/html/19336/media/image6.png
