@@ -16,11 +16,19 @@
       * [Data Balancing](#data-balancing)
       * [Data Quantity](#data-quantity)
       * [Noise and Variability](#noise-and-variability)
+      * [Summary](#summary)
   * [Classification](#classification)
+    * [Non-parametric models](#nonparametric-models)
+      * [K-Nearest Neighbour](#knearest-neighbour)
+    * [Rule-based models](#rulebased-models)
+      * [Decision trees](#decision-trees)
+        * [Entropy](#entropy)
   * [Data Visualisation](#data-visualisation)
   * [Prediction](#prediction)
   * [Data Mining Project](#data-mining-project)
   * [Logistic Regression](#logistic-regression)
+  * [Clustering & Association Rules](#clustering--association-rules)
+  * [Time series Forecasting](#time-series-forecasting)
 * [Reasoning Systems](#reasoning-systems)
   * [Rule-based Systems (RBS)](#rulebased-systems-rbs)
     * [Deductive inference](#deductive-inference)
@@ -39,6 +47,7 @@
   * [Probability](#probability)
   * [Bayes' Theorem](#bayes-theorem)
   * [Bayesian Classifier](#bayesian-classifier)
+  * [Bayesian Networks](#bayesian-networks)
 <!-- END TOC -->
 
 # Data Mining
