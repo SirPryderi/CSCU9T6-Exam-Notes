@@ -130,8 +130,17 @@ is the **error** of the model, usually referred as _mean square error_ or **MSE*
 Creating model for a relationship that is not linear is much more difficult, and
 requires more data.
 
-**Learning** is the process or minimising the MSE, either using linear regression,
+**Learning** is the process or minimising the **MSE**, either using linear regression,
 or iterative search.
+
+Much more data is required to learn a non-linear relationship.
+
+#### Summary
+Data quality and quantity rely on:
+– The **shape** of the data’s distribution.
+– The **number** of variables in the data.
+– The **degree of linearity** in the relationship to be captured.
+– The amount of **noise** and **unaccounted for variability** in the data.
 
 ## Classification
 ## Data Visualisation
@@ -337,6 +346,9 @@ This is known as the **Bayes' Theorem**, and allows to determine the probabiliy 
 ## Bayesian Classifier
 **Bayesian Classfiers** are statistical tools that can predict the probability that a particular sample is a member of a particular class.
 One of the simplest Bayesian Classifier is known as the **Naïve Bayesian Classfier**, based on an _independence_ assumption.
+
+## Bayesian Networks
+**Bayesian Belief Netowkrs** (BNNs) are a way of modeling probabilites based on data or knowledge to estimate probabilities of new events.
 
 
 [histogram]: https://media1.shmoop.com/images/algebra/alg_probstat_picsingvar_narr_graphik_14.png
