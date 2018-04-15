@@ -296,7 +296,68 @@ The **likelihood** is the reverse of a conditional probability:
 __The whole thing was out of scope, why did I even bother?__
 
 ## Clustering & Association Rules
+**Clustering** or **Cluster Analysis** is the task of grouping set of similar objects in a cluster, based on some similarity algorithm.
+
+![clustering]
+
+There are various ways of measuring similarity:
+
+- Numerical Data
+  - Euclidean Distance
+  - Manhattan Distance
+- Categorical Data
+  - Hamming Distance
+  - Jacard Coefficient
+- Combined Data
+  - Weighted normalized distance
+
+![manhattan-vs-euclidean-distance]
+
+### Mean Clustering
+`x̅` is the mean of a value `x` in a dataset with size `s`, and is obtained as:
+
+		x̅ = (Σ x) / s
+		
+Clustering algorithms are able to find the mean of subsets that are called clusters, each with its mean.
+
+The goal of the K-Means clustering algorithm is to minimise the sum of square of distance from all data points to their means.
+
+Algorithm:
+- Pick K different points from the data and assume they centers
+- Repeat until stabilisation
+  - Assign each point to the closest cluster center
+  - Tune cluster centers
+  
+The disadvantages of the k-means clustering are:
+- Assumes the clusters to be round
+- K needs to be given in advance
+- It assumes that all distances are equally important
+
+### Hierarchical Clustering Algorithm
+Algorithm:
+- Start with a cluster for each data point
+- Repeat until reached number of clusters (could be one)
+  - Joins the two clusters that are most similar
+  - Calculate new center
+  
+### Market Basket Analysis
+**Market Basket Analysis** is a data mining technique that aims to discover co-occurence relationships between activities performed by a specific group of individuals. It is used, for instance, in reteil to understand the purchase behaviour of customers. Example: `IF CUSTOMER BOUGHT A THEN HE WILL BUY B`. The process of finding the relationship is called **association rule discovery**.
+
+- The **itemset** is the collection of one or more items.
+- The **support count** (σ) is the frequency of occurence of an itemset.
+- The **support** is the fraction of the transactions that contain an itemset.
+- The **frequent itemset** an itemset whose support is greater than a treshold.
+
+Association rules are expressed as X → Y, where X and Y are itemsets. Transaction rules are not symmetric.
+
+The **apriori** algorithm is capable of finding association rules from data. 
+Steps:
+- Generate itemsets with a minimum support
+- Generate rules with a minimum confidence
+
+
 ## Time series Forecasting
+
 
 ---
 
@@ -506,6 +567,8 @@ One of the simplest Bayesian Classifier is known as the **Naïve Bayesian Classf
 [scatter-plot]: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Scatter_diagram_for_quality_characteristic_XXX.svg/1200px-Scatter_diagram_for_quality_characteristic_XXX.svg.png
 [multi-layer-perceptron]: https://www.researchgate.net/profile/Pinyi_Lu/publication/281541059/figure/fig5/AS:281379779694601@1444097575724/The-multilayer-perceptron-structure-of-artificial-neural-network-The-multilayer.png
 [ordinary-least-squares]: https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Okuns_law_quarterly_differences.svg/600px-Okuns_law_quarterly_differences.svg.png
+[manhattan-vs-euclidean-distance]: https://prismoskills.appspot.com/lessons/2D_and_3D_Puzzles/imgs/Manhattan_and_Euclidean.png
+[clustering]: https://www.imperva.com/blog/wp-content/uploads/2017/07/k-means-clustering-on-spherical-data-1v2.png
 [expert-system-architecture]: http://cinuresearch.tripod.com/ai/www-cee-hw-ac-uk/_alison/ai3notes/esarch.jpg
 [age-fuzzy-graph]: https://c.mql5.com/2/20/fuzzy_set_age.png
 [cbr-architecture]: https://www.intechopen.com/source/html/19336/media/image6.png
