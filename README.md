@@ -18,19 +18,31 @@
       * [Noise and Variability](#noise-and-variability)
       * [Summary](#summary)
   * [Classification](#classification)
-    * [Non-parametric models](#nonparametric-models)
-      * [K-Nearest Neighbour](#knearest-neighbour)
-    * [Rule-based models](#rulebased-models)
+    * [Non-parametric models](#non-parametric-models)
+      * [K-Nearest Neighbour](#k-nearest-neighbour)
+    * [Rule-based models](#rule-based-models)
       * [Decision trees](#decision-trees)
         * [Entropy](#entropy)
   * [Data Visualisation](#data-visualisation)
+    * [Scatter Plots](#scatter-plots)
   * [Prediction](#prediction)
+    * [Neural Networks](#neural-networks)
+      * [Advantages](#advantages)
+      * [Disadvantages](#disadvantages)
+    * [Overfitting](#overfitting)
   * [Data Mining Project](#data-mining-project)
-  * [Logistic Regression](#logistic-regression)
+  * [Regression](#regression)
+    * [Simple Linear Regression](#simple-linear-regression)
+    * [Logistic Regression](#logistic-regression)
   * [Clustering & Association Rules](#clustering--association-rules)
-  * [Time series Forecasting](#time-series-forecasting)
+    * [Mean Clustering](#mean-clustering)
+    * [Hierarchical Clustering Algorithm](#hierarchical-clustering-algorithm)
+    * [Market Basket Analysis](#market-basket-analysis)
+  * [Time Series Forecasting](#time-series-forecasting)
+    * [Time Series](#time-series)
+  * [Time Series Forecasting Techniques](#time-series-forecasting-techniques)
 * [Reasoning Systems](#reasoning-systems)
-  * [Rule-based Systems (RBS)](#rulebased-systems-rbs)
+  * [Rule-based Systems (RBS)](#rule-based-systems-rbs)
     * [Deductive inference](#deductive-inference)
       * [Forward Chaining](#forward-chaining)
       * [Backward Chaining](#backward-chaining)
@@ -38,7 +50,7 @@
   * [Fuzzy Logic](#fuzzy-logic)
     * [Defuzzification](#defuzzification)
     * [Hedges](#hedges)
-  * [Case-based Reasoning](#casebased-reasoning)
+  * [Case-based Reasoning](#case-based-reasoning)
     * [Procedure](#procedure)
     * [Similarity](#similarity)
     * [Adaptation](#adaptation)
@@ -355,10 +367,54 @@ Steps:
 - Generate itemsets with a minimum support
 - Generate rules with a minimum confidence
 
+## Time Series Forecasting
+### Time Series
+**A Time Series** is a sequence of values or events where the next event is determined by events that precede it.
 
-## Time series Forecasting
+A time series reflects the **process** being measured. This process has certain **components** that affect its behaviour. 
 
+The **level** of a time series is the average of the values of the series at each point in time. If the average remains the same, the sereis is said to be **stationary**.
 
+A time series is said to have a **trend** if its values increases or decreases continuously over time (non-stationary).
+
+A **season** is any period of time that repeats through the data.
+
+**Cycles** are smooth undulations of a process (often physical).
+
+## Time Series Forecasting Techniques
+Different techniques are designed to work with a specific component of a time series. More than one technique might be necessary to effectively predict the time series. 
+
+Simple techniques predict the next step based on:
+- The previous step
+- The average of the last few
+- The weighted average of the last few
+
+Many processes with a fixedl level tend to go back to that certain level.
+
+**ARMA** models can predict how quickly the process moves back to its level after a **shock**.
+
+**ARMA** stands for Auto-Regressive Moving Average.
+
+		Xₜ = c + eₜ + Σ fᵢ·Xₜ₋ᵢ + tᵢ·eₜ₋ᵢ
+
+Let's just write formulae, pretending we know what they do.
+
+**ARIMA** stands for Auto-Regressive Integrated Moving Average, and is an extension of the ARMA model that takes **trends** in account.
+
+Seasonal factors might either be:
+- Additive
+- Multiplicative
+
+Seasonality must be identified and modelled, and then removed from the time series to look for other components.
+
+**Auto-Correlation**
+Auto-correlation is a method of finding the correlation between each value and the n-values before it.
+
+**Fourier Transform** is a mathematical method for decomposing a signal into a set of sine waves.
+
+**Recurrent Neural Networks** are good at finding cyclical components in a time series.
+
+Unless the system is completely closed, there always will be outside forces at play. There forces can be measurable, thus added to the the model, or they will just appear as noise in the data, decreasing the **confidence score**. Any part of the of the series that cannot be predicted by the model is called **residual**.
 ---
 
 # Reasoning Systems
