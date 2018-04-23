@@ -31,6 +31,8 @@
       * [Disadvantages](#disadvantages)
     * [Overfitting](#overfitting)
   * [Data Mining Project](#data-mining-project)
+    * [Data Quantity](#data-quantity)
+    * [Data Quality](#data-quality)
   * [Regression](#regression)
     * [Simple Linear Regression](#simple-linear-regression)
     * [Logistic Regression](#logistic-regression)
@@ -175,11 +177,12 @@ The classification can either have a:
 - **Rule-based model** (_decision trees_)
 
 A classification that indicate the propensity to an act, is called **predictive**.
-A classification that indicates the similarity to an objecis called **definitive**.
+A classification that indicates the similarity to an object is called **definitive**.
 
 ### Non-parametric models
 #### K-Nearest Neighbour
 Places all the entries in an n-dimensional space, counts all the example in a defined radius, and the ones that appear the most are picked as the winning classification
+
 ![k-nearest-neighbour]
 
 ### Rule-based models
@@ -231,7 +234,7 @@ To reduce probles with **overlapping** of variables, the values can be added wit
 ## Prediction
 **Prediction** is the act of guessng the identity of one thing, purely based on the description of another. Not necessarily predicting future events.
 
-Prediction differs from **classification** because it is usually able of predicting continuous numerical values, whereas classifications are able to _predict_ discreet nominal values.
+Prediction differs from **classification** because it is usually able of predicting continuous numerical values, whereas classifications are able to _predict_ discrete nominal values.
 
 Most prediction techniques are based on mathematical models:
 - Linear regression
@@ -271,7 +274,7 @@ Each neuron is composed of two units:
 - Can be very ineffective if trained wrongly
 
 ### Overfitting
-A data mining predicotr can caputre the structore of the data to the point that irrelevant data in the training model are used in the creation of the model, while not generally true. This phenomenon is known as **overfitting**. This usually happens when a dataset is not big enough.
+A data mining predictor can capture structures in the data to the point that irrelevant relationships in the training model are used in the creation of the model, while not generally true for a bigger data set. This phenomenon is known as **overfitting**. This usually happens when a dataset is not big enough.
 
 ## Data Mining Project
 **CRISP DM** standard stands for CRoss Industry Standard Process for Data Mining. 
@@ -284,10 +287,14 @@ A data mining predicotr can caputre the structore of the data to the point that 
 - Treat unbalanced data
 
 ### Data Quality
-**Cross-validation** splits the data into n subsets, then train the models using n-1 subsets for training, and 1 for testing. This is repeated for each subset. This helps reducing overfitting.
+**Cross-validation** splits the data into n subsets, then trains the model using n-1 subsets for training, and 1 for testing. This is repeated for each subset. This helps reducing overfitting.
+
+![cross-validation]
 
 **ROC Curves** are a tool for displaying the sorting efficiency of the model. The Y axis of the curve represents the sensitivity and the X axis the specificity. It shows how an increase of sensitivity affects the specificity of the model.
-The closer the ROC curve is to the top left border the more accurate the model is. The worst possible curve is one that lies along the 45° diagonal. As it is shown by the ROC curves above for two values of performance the area below the curve is sufficiently high, meaning that the accuracy is good. 
+The closer the ROC curve is to the top left border the more accurate the model is. The worst possible curve is one that lies along the 45° diagonal.
+
+![roc-curve]
 
 **Lift** is a measure of effectiveness of a predictive model, calculated as the ratio between the results obtained with and without the predictive model. 
 **Lift Charts** show in the y-axis the lift, and on the x-axis the percentage percentage of the dataset.
@@ -296,7 +303,7 @@ The closer the ROC curve is to the top left border the more accurate the model i
 **Regression** analysis is a statistical process for estimating the relationships among variables.
 
 ### Simple Linear Regression
-Simple Linear Regression uses the **Ordinary Least Squares** method. OLS is capable of estimating unknown parameters in a linear regression, by minimising the sum of the suqres of the differences between the dependent variable and those predicted by the linear function.
+Simple Linear Regression uses the **Ordinary Least Squares** method. OLS is capable of estimating unknown parameters in a linear regression, by minimising the sum of the squares of the differences between the dependent variable and those predicted by the linear function.
 
 ![ordinary-least-squares]
 
@@ -348,13 +355,13 @@ There are various ways of measuring similarity:
 		
 Clustering algorithms are able to find the mean of subsets that are called clusters, each with its mean.
 
-The goal of the K-Means clustering algorithm is to minimise the sum of square of distance from all data points to their means.
+The goal of the K-Means clustering algorithm is to minimise the sum of square of distance from all data points to their mean.
 
 Algorithm:
-- Pick K different points from the data and assume they centers
+- Pick K different points from the data and assume they are the centers
 - Repeat until stabilisation
   - Assign each point to the closest cluster center
-  - Tune cluster centers
+  - Calculate the center of each cluster and move the centroids
   
 The disadvantages of the k-means clustering are:
 - Assumes the clusters to be round
@@ -369,7 +376,7 @@ Algorithm:
   - Calculate new center
   
 ### Market Basket Analysis
-**Market Basket Analysis** is a data mining technique that aims to discover co-occurence relationships between activities performed by a specific group of individuals. It is used, for instance, in reteil to understand the purchase behaviour of customers. Example: `IF CUSTOMER BOUGHT A THEN HE WILL BUY B`. The process of finding the relationship is called **association rule discovery**.
+**Market Basket Analysis** is a data mining technique that aims to discover co-occurence relationships between activities performed by a specific group of individuals. It is used, for instance, in retail to understand the purchase behaviour of customers. Example: `IF CUSTOMER BOUGHT A THEN HE WILL BUY B`. The process of finding the relationship is called **association rule discovery**.
 
 - The **itemset** is the collection of one or more items.
 - The **support count** (σ) is the frequency of occurence of an itemset.
@@ -385,17 +392,17 @@ Steps:
 
 ## Time Series Forecasting
 ### Time Series
-**A Time Series** is a sequence of values or events where the next event is determined by events that precede it.
+A **Time Series** is a sequence of values or events where the next event is determined by events that precede it.
 
 A time series reflects the **process** being measured. This process has certain **components** that affect its behaviour. 
 
-The **level** of a time series is the average of the values of the series at each point in time. If the average remains the same, the sereis is said to be **stationary**.
+The **level** of a time series is the average of the values of the series at each point in time. If the average remains the same, the series is said to be **stationary**.
 
-A time series is said to have a **trend** if its values increases or decreases continuously over time (non-stationary).
+A time series is said to have a **trend** if its value increases or decreases continuously over time (non-stationary).
 
 A **season** is any period of time that repeats through the data.
 
-**Cycles** are smooth undulations of a process (often physical).
+**Cycles** are smooth undulations of a process (often physical) and with a sine-like behaviour.
 
 ## Time Series Forecasting Techniques
 Different techniques are designed to work with a specific component of a time series. More than one technique might be necessary to effectively predict the time series. 
@@ -639,6 +646,8 @@ One of the simplest Bayesian Classifier is known as the **Naïve Bayesian Classf
 [k-nearest-neighbour]: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/KnnClassification.svg/220px-KnnClassification.svg.png
 [scatter-plot]: https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Scatter_diagram_for_quality_characteristic_XXX.svg/1200px-Scatter_diagram_for_quality_characteristic_XXX.svg.png
 [multi-layer-perceptron]: https://www.researchgate.net/profile/Pinyi_Lu/publication/281541059/figure/fig5/AS:281379779694601@1444097575724/The-multilayer-perceptron-structure-of-artificial-neural-network-The-multilayer.png
+[cross-validation]: https://upload.wikimedia.org/wikipedia/commons/1/1c/K-fold_cross_validation_EN.jpg
+[roc-curve]: https://docs.eyesopen.com/toolkits/cookbook/python/_images/roc-theory-small.png
 [ordinary-least-squares]: https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Okuns_law_quarterly_differences.svg/600px-Okuns_law_quarterly_differences.svg.png
 [manhattan-vs-euclidean-distance]: https://prismoskills.appspot.com/lessons/2D_and_3D_Puzzles/imgs/Manhattan_and_Euclidean.png
 [clustering]: https://www.imperva.com/blog/wp-content/uploads/2017/07/k-means-clustering-on-spherical-data-1v2.png
