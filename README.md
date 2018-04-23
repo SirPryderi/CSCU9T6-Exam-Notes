@@ -274,7 +274,23 @@ Each neuron is composed of two units:
 A data mining predicotr can caputre the structore of the data to the point that irrelevant data in the training model are used in the creation of the model, while not generally true. This phenomenon is known as **overfitting**. This usually happens when a dataset is not big enough.
 
 ## Data Mining Project
-Coming soon!
+**CRISP DM** standard stands for CRoss Industry Standard Process for Data Mining. 
+
+### Data Quantity
+- Chose the variables to be used for the model
+- Look at the distribution of the chosen values
+- Look at the level of noise in the data
+- Decide whether or not there are sufficient examples in the data
+- Treat unbalanced data
+
+### Data Quality
+**Cross-validation** splits the data into n subsets, then train the models using n-1 subsets for training, and 1 for testing. This is repeated for each subset. This helps reducing overfitting.
+
+**ROC Curves** are a tool for displaying the sorting efficiency of the model. The Y axis of the curve represents the sensitivity and the X axis the specificity. It shows how an increase of sensitivity affects the specificity of the model.
+The closer the ROC curve is to the top left border the more accurate the model is. The worst possible curve is one that lies along the 45° diagonal. As it is shown by the ROC curves above for two values of performance the area below the curve is sufficiently high, meaning that the accuracy is good. 
+
+**Lift** is a measure of effectiveness of a predictive model, calculated as the ratio between the results obtained with and without the predictive model. 
+**Lift Charts** show in the y-axis the lift, and on the x-axis the percentage percentage of the dataset.
 
 ## Regression
 **Regression** analysis is a statistical process for estimating the relationships among variables.
@@ -492,7 +508,7 @@ This model assumes that:
 - Hypotesis are mutually exclusive and exhaustive
 - Piece of evidence are conditially independent
 
-This mode is usually inaccurate, because the assumptions above are mostly never true, but this model has evolved into **belief networks** that are not giving very promising results.
+This model is usually inaccurate, because the assumptions above are mostly never true, but the model has evolved into **belief networks** that are  giving very promising results.
 
 ## Fuzzy Logic
 **Fuzzy logic** is an alternative method to boolean logic for determining the value of a property. Instead of being either true or false, a percentage of how much the current condition fits a definition is used.
