@@ -431,6 +431,7 @@ Auto-correlation is a method of finding the correlation between each value and t
 **Recurrent Neural Networks** are good at finding cyclical components in a time series.
 
 Unless the system is completely closed, there always will be outside forces at play. There forces can be measurable, thus added to the the model, or they will just appear as noise in the data, decreasing the **confidence score**. Any part of the of the series that cannot be predicted by the model is called **residual**.
+
 ---
 
 # Reasoning Systems
