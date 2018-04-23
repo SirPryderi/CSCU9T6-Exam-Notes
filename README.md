@@ -158,10 +158,10 @@ Much more data is required to learn a non-linear relationship.
 
 #### Summary
 Data quality and quantity rely on:
-– The **shape** of the data’s distribution.
-– The **number** of variables in the data.
-– The **degree of linearity** in the relationship to be captured.
-– The amount of **noise** and **unaccounted for variability** in the data.
+- The **shape** of the data’s distribution.
+- The **number** of variables in the data.
+- The **degree of linearity** in the relationship to be captured.
+- The amount of **noise** and **unaccounted for variability** in the data.
 
 ## Classification
 **Classification** is assigning an object to a certain class, based on its **similarity** to previous examples.
